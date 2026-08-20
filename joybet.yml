@@ -2,7 +2,7 @@ name: Joybet Botu (Saatlik)
 
 on:
   schedule:
-    - cron: "1 * * * *"
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -47,5 +47,6 @@ jobs:
           if [ -n "$(git status --porcelain state.json)" ]; then
             git add state.json
             git commit -m "chore: state güncelle"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
