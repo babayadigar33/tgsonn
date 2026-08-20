@@ -2,7 +2,7 @@ name: Joybet Botu (Saatlik)
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "1 * * * *"
   workflow_dispatch: {}
 
 permissions:
